@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="thank_you.html" method="GET">
+        <table border="2">
+            <tr>
+
+                <legend>Car Dealership</legend>
+
+                <th>
+                    <label for="fname" required>First Name</label>
+                    <input type="text" placeholder="George" autofocus="autofocus" required pattern="[A-Z][a-z]+">
+                </th>
+
+                <th>
+                    <label for="lname" required>Last Name</label>
+                    <input type="text" placeholder="Ivanov" required pattern="[A-Z][a-z]+">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="phone">Number</label>
+                    <input type="tel" placeholder="+359***" required
+                        pattern="^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$">
+                </th>
+                <th>
+                    <label for="email" required>Email Address</label>
+                    <input type="email" placeholder="george_ivanov@gmail.com">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+
+                    <label for="manufacturer">Manufacturer</label>
+                    <select name="manufacturer">
+                        <option value="">Audi</option>
+                        <option value="">Volkswagen</option>
+                        <option value="">Skoda</option>
+                        <option value="">Mercedes</option>
+                    </select>
+                </th>
+                <th>
+                    <label for="engine">Engine Type</label>
+                    <select name="engineType">
+                        <option value="">Diesel</option>
+                        <option value="">Gasoline</option>
+                        <option value="">Hybrid</option>
+                        <option value="">Electric</option>
+                    </select>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+
+                    <label for="gearbox">Gearbox:</label>
+                    <input type="radio" name="aGearbox">Automatic
+                    <input type="radio" name="mGearbox">Manual <br>
+                </th>
+                <th>
+                    <label for="price">Price</label>
+                    <input type="range" value="30000" min="30000" max="150000" step="1000"
+                        oninput="this.nextElementSibling.value = this.value">
+                    <output>30000</output>
+
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+
+                    <textarea name="addinfo"cols="69" rows="5" placeholder="Additional info"></textarea>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button>SUBMIT</button>
+                </th>
+                <th>
+                    <input type="reset">
+                </th>
+            </tr>
+
+
+        </table>
+    </form>
+
+</body>
+
+</html>
